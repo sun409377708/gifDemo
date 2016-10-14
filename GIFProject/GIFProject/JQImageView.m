@@ -7,8 +7,9 @@
 //
 
 #import "JQImageView.h"
-//#import <UIImageView+WebCache.h>
 #import <SDWebImageManager.h>
+#import <NSData+ImageContentType.h>
+
 
 @implementation JQImageView
 
@@ -21,6 +22,14 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
            
+            //判断是否是gif图
+            if ([[NSData sd_contentTypeForImageData:data] isEqualToString:@"image/gif"]) {
+                
+                NSLog(@"gif图");
+                return ;
+            }
+            
+            
             self.image = image;
         });
     }];
