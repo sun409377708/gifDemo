@@ -40,7 +40,7 @@
 
 - (void)updateTime {
     
-    NSLog(@"%s", __FUNCTION__);
+   self.image = [self jq_animatedGIFWithData:_imageData];
 }
 
 - (void)jq_setImageWithURL:(NSURL *)url {
@@ -65,7 +65,8 @@
                 
                 return ;
             }
-            
+            //情况数据
+            _imageData = nil;
             self.timer.fireDate = [NSDate distantFuture];
             
             self.image = image;
@@ -95,26 +96,16 @@
         animatedImage = [[UIImage alloc] initWithData:data];
     }
     else {
-        NSMutableArray *images = [NSMutableArray array];
         
-        // 5. 遍历图片帧数
-        for (size_t i = 0; i < count; i++) {
-            // 6. 创建帧数对于的图像
-            CGImageRef image = CGImageSourceCreateImageAtIndex(source, i, NULL);
-            if (!image) {
-                continue;
-            }
-            
-            UIImage *img = [UIImage imageWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
-            
-            //将图片添加到数组中
-            [images addObject:img];
-            
-            CGImageRelease(image);
-        }
+        // 6. 创建帧数对于的图像
+        CGImageRef image = CGImageSourceCreateImageAtIndex(source, _currentIndex, NULL);
         
-        //使用数组, 创建可动画对象
-        animatedImage = [UIImage animatedImageWithImages:images duration:5];
+        _currentIndex = (_currentIndex + 1) % count;
+        
+        
+        animatedImage = [UIImage imageWithCGImage:image scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+        
+        CGImageRelease(image);
     }
     
     CFRelease(source);
