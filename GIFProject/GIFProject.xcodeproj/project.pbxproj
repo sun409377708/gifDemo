@@ -13,9 +13,14 @@
 		77B8DDCB1DB0759C008B54F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8DDC91DB0759C008B54F4 /* Main.storyboard */; };
 		77B8DDCD1DB0759C008B54F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B8DDCC1DB0759C008B54F4 /* Assets.xcassets */; };
 		77B8DDD01DB0759C008B54F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B8DDCE1DB0759C008B54F4 /* LaunchScreen.storyboard */; };
+		77B8DDD81DB07643008B54F4 /* source.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77B8DDD71DB07643008B54F4 /* source.gif */; };
+		77B8DDDB1DB0766B008B54F4 /* JQImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B8DDDA1DB0766B008B54F4 /* JQImageView.m */; };
+		EF5D558C83BA3040C84279FF /* libPods-GIFProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37A0F7AF255EACF42412E68A /* libPods-GIFProject.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A0F7AF255EACF42412E68A /* libPods-GIFProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GIFProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D9ED5B2F197A89B4AB65FAE /* Pods-GIFProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GIFProject/Pods-GIFProject.release.xcconfig"; sourceTree = "<group>"; };
 		77B8DDBD1DB0759C008B54F4 /* GIFProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B8DDC11DB0759C008B54F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77B8DDC31DB0759C008B54F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,10 @@
 		77B8DDCC1DB0759C008B54F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77B8DDCF1DB0759C008B54F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B8DDD11DB0759C008B54F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77B8DDD71DB07643008B54F4 /* source.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = source.gif; sourceTree = "<group>"; };
+		77B8DDD91DB0766B008B54F4 /* JQImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JQImageView.h; sourceTree = "<group>"; };
+		77B8DDDA1DB0766B008B54F4 /* JQImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JQImageView.m; sourceTree = "<group>"; };
+		8B78EC99E342EAD39DB3D387 /* Pods-GIFProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GIFProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GIFProject/Pods-GIFProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +42,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5D558C83BA3040C84279FF /* libPods-GIFProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53ABF3128A963FD93E4646A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B78EC99E342EAD39DB3D387 /* Pods-GIFProject.debug.xcconfig */,
+				4D9ED5B2F197A89B4AB65FAE /* Pods-GIFProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77B8DDB41DB0759C008B54F4 = {
 			isa = PBXGroup;
 			children = (
 				77B8DDBF1DB0759C008B54F4 /* GIFProject */,
 				77B8DDBE1DB0759C008B54F4 /* Products */,
+				53ABF3128A963FD93E4646A3 /* Pods */,
+				D17E6509D906155347EECC03 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +83,13 @@
 				77B8DDC41DB0759C008B54F4 /* AppDelegate.m */,
 				77B8DDC61DB0759C008B54F4 /* ViewController.h */,
 				77B8DDC71DB0759C008B54F4 /* ViewController.m */,
+				77B8DDD91DB0766B008B54F4 /* JQImageView.h */,
+				77B8DDDA1DB0766B008B54F4 /* JQImageView.m */,
 				77B8DDC91DB0759C008B54F4 /* Main.storyboard */,
 				77B8DDCC1DB0759C008B54F4 /* Assets.xcassets */,
 				77B8DDCE1DB0759C008B54F4 /* LaunchScreen.storyboard */,
 				77B8DDD11DB0759C008B54F4 /* Info.plist */,
+				77B8DDD71DB07643008B54F4 /* source.gif */,
 				77B8DDC01DB0759C008B54F4 /* Supporting Files */,
 			);
 			path = GIFProject;
@@ -79,6 +103,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D17E6509D906155347EECC03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37A0F7AF255EACF42412E68A /* libPods-GIFProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77B8DDD41DB0759C008B54F4 /* Build configuration list for PBXNativeTarget "GIFProject" */;
 			buildPhases = (
+				D17DA5D16C5CA0052BC21F61 /* [CP] Check Pods Manifest.lock */,
 				77B8DDB91DB0759C008B54F4 /* Sources */,
 				77B8DDBA1DB0759C008B54F4 /* Frameworks */,
 				77B8DDBB1DB0759C008B54F4 /* Resources */,
+				51CB360673DFCF8044E4DEFC /* [CP] Embed Pods Frameworks */,
+				585B7B6747A1719CB7D39376 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,10 +175,59 @@
 				77B8DDD01DB0759C008B54F4 /* LaunchScreen.storyboard in Resources */,
 				77B8DDCD1DB0759C008B54F4 /* Assets.xcassets in Resources */,
 				77B8DDCB1DB0759C008B54F4 /* Main.storyboard in Resources */,
+				77B8DDD81DB07643008B54F4 /* source.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51CB360673DFCF8044E4DEFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GIFProject/Pods-GIFProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		585B7B6747A1719CB7D39376 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GIFProject/Pods-GIFProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D17DA5D16C5CA0052BC21F61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77B8DDB91DB0759C008B54F4 /* Sources */ = {
@@ -151,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B8DDC81DB0759C008B54F4 /* ViewController.m in Sources */,
+				77B8DDDB1DB0766B008B54F4 /* JQImageView.m in Sources */,
 				77B8DDC51DB0759C008B54F4 /* AppDelegate.m in Sources */,
 				77B8DDC21DB0759C008B54F4 /* main.m in Sources */,
 			);
@@ -262,6 +347,7 @@
 		};
 		77B8DDD51DB0759C008B54F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B78EC99E342EAD39DB3D387 /* Pods-GIFProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GIFProject/Info.plist;
@@ -273,6 +359,7 @@
 		};
 		77B8DDD61DB0759C008B54F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D9ED5B2F197A89B4AB65FAE /* Pods-GIFProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GIFProject/Info.plist;
@@ -301,6 +388,7 @@
 				77B8DDD61DB0759C008B54F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "JQImageView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet JQImageView *imageView;
 
 @end
 
@@ -16,12 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"source.gif" withExtension:nil];
+    
+    [self.imageView jq_setImageWithURL:url];}
 
 @end
